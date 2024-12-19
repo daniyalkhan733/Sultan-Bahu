@@ -1,0 +1,93 @@
+---
+import Layout from "./Layout.astro";
+const {frontmatter} = Astro.props;
+
+
+---
+<Layout>
+    <div class="cm-details">
+        <div class="container">
+           <div class="row gutter-60">
+              <div class="col-12 col-xl-8">
+                 <div class="cm-details__content">
+                    <div class="cm-details__poster" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                       <img src={frontmatter.image} alt="Image">
+                    </div>
+                    <div class="cm-details-meta">
+                       <p ><i class="fa-solid fa-calendar-days"></i>19 Dec 2024</p>
+                       <p><i class="fa-solid fa-location-dot"></i>Sultan Bahu Centre</p>
+                    </div>
+                    <div class="cm-group cta">
+                       <h3 class="title-animation">{frontmatter.title}</h3>
+                       <p>{frontmatter.description}</p>
+                    </div>
+                    <div class="cm-group cta">
+                       <h3 class="title-animation">Summary</h3>
+                       
+                       
+                    </div>
+                    <div class="cm-img-group cta">
+                        <slot/>
+                       
+                    </div>
+              
+                 </div>
+              </div>
+              <div class="col-12 col-xl-4">
+                 <div class="cm-details__sidebar">
+                  
+                    <div class="cm-sidebar-widget" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                       <div class="intro">
+                          <h5>Recent Posts</h5>
+                       </div>
+                       <div class="cm-sidebar-post">
+                          <div class="single-item">
+                             <div class="thumb">
+                                <a href="blog-details.html">
+                                <img src="assets/images/blog/ph-one.png" alt="Image">
+                                </a>
+                             </div>
+                             <div class="content">
+                                <p><i class="fa-solid fa-calendar-days"></i> <span>November 19, 2024</span>
+                                </p>
+                                <p><a href="blog-details.html">Where Innovation Meets Foundation</a>
+                                </p>
+                             </div>
+                          </div>
+                          <div class="single-item" >
+                             <div class="thumb">
+                                <a href="blog-details.html">
+                                <img src="assets/images/blog/ph-two.png" alt="Image">
+                                </a>
+                             </div>
+                             <div class="content">
+                                <p><i class="fa-solid fa-calendar-days"></i> <span>November 19, 2024</span>
+                                </p>
+                                <p><a href="blog-details.html">Where Innovation Meets Foundation</a>
+                                </p>
+                             </div>
+                          </div>
+                          <div class="single-item">
+                             <div class="thumb">
+                                <a href="blog-details.html">
+                                <img src="assets/images/blog/three.png" alt="Image">
+                                </a>
+                             </div>
+                             <div class="content">
+                                <p><i class="fa-solid fa-calendar-days"></i> <span>November 22, 2024</span>
+                                </p>
+                                <p><a href="blog-details.html">Structures That Stand,
+                                   Dreams That Soar</a>
+                                </p>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                   
+                  
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+</Layout>

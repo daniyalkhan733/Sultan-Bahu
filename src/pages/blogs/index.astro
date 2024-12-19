@@ -1,9 +1,115 @@
 ---
+import Breadcrumb from "../../components/Breadcrumb.astro";
 import Layout from "../../layouts/Layout.astro";
 
-
+const posts = await Astro.glob("../blogs/*.md");
 ---
 
 <Layout>
-    
+  <Breadcrumb
+    title="Our Blogs"
+    description="Blogs"
+    image="/assets/images/banner/banner-bg.png"
+  />
+  <section class="blog">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-xl-7">
+          <div
+            class="section__header text-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <span class="sub-title"
+              ><i class="icon-donation"></i>Start donating poor people</span
+            >
+            <h2 class="title-animation">
+              Our Latest <span>News</span> & Articles you like
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="row gutter-40">
+        {
+          posts.map((blogs) => (
+            <div class="col-12 col-lg-6 col-xl-4">
+              <div
+                class="blog__single-wrapper"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                <div class="blog__single van-tilt">
+                  <div class="blog__single-thumb">
+                    <a href={blogs.url}>
+                      <img
+                        src={blogs.frontmatter.image}
+                        alt={blogs.frontmatter.title}
+                      />
+                    </a>
+                  </div>
+                  <div class="blog__single-inner">
+                    <div class="blog__single-meta">
+                      <p>
+                        <i class="icon-user" />
+                        SBC
+                      </p>
+                    </div>
+                    <div class="blog__single-content">
+                      <h5>
+                        <a href={blogs.url}>{blogs.frontmatter.title}</a>
+                      </h5>
+                      <p id="description">{blogs.frontmatter.description}</p>
+                    </div>
+                    <div class="blog__single-cta">
+                      <a
+                        href={blogs.frontmatter.url}
+                        aria-label={blogs.frontmatter.title}
+                        title={blogs.frontmatter.title}
+                      >
+                        Read More
+                        <i class="fa-solid fa-circle-arrow-right" />
+                      </a>
+                    </div>
+                  </div>
+                  <img
+                    src="/assets/images/blog/spade.png"
+                    alt="Image"
+                    class="spade-two"
+                  />
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div class="blog-bg">
+      <img src="/assets/images/blog/blog-bg.png" alt="Image" />
+    </div>
+    <div class="spade">
+      <img
+        src="/assets/images/blog/spade-base.png"
+        alt="Image"
+        class="base-img"
+      />
+    </div>
+  </section>
+<style>
+    #description {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        color: black;
+    }
+    #description:hover {
+        overflow: visible;
+        text-overflow: unset;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        color: white;
+    }
+</style>
 </Layout>
