@@ -1817,7 +1817,7 @@ div {
 .btn--primary {
   padding: 13px 24px;
   background-color: var(--base-color);
-  color: var(--black);
+  color: white;
   position: relative;
   font-weight: 800;
   z-index: 1;
@@ -2675,6 +2675,7 @@ div {
 .header .navbar-logo img {
   max-width: 160px;
   height: 36px;
+  border-radius: 22px;
 }
 .header .navbar__menu {
   -webkit-box-flex: 1;
@@ -2701,7 +2702,7 @@ div {
   padding: 42px 15px;
   width: 100%;
   line-height: 1;
-  color: #16171a;
+  color: white;
 }
 .header .navbar__item a:hover {
   color: var(--hover-color);
@@ -9967,7 +9968,7 @@ div {
 .overview .overview__left {
   border-radius: 10px;
 }
-.overview .cause-progress__goal {
+.overview  {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9979,12 +9980,15 @@ div {
       flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: center;
 }
 .overview .cause-progress__goal span {
   font-weight: 600;
   color: var(--black);
+  justify-content: center;
+  align-items: center;
 }
+
 .overview .cause-progress__goal h5 {
   font-weight: 800;
   color: var(--black);
