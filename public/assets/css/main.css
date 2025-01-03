@@ -3725,7 +3725,7 @@ div {
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
   .header-secondary .navbar__menu-wrapper {
-    background-color: transparent;
+    /* background-color: transparent; */
   }
   .header-secondary .main-header__menu-box {
     padding-inline: 0px !important;
