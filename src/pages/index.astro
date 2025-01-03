@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import DonationCard from '../components/DonationCard.astro';
+const posts = await Astro.glob("./blogs/*.md");
+
 ---
 
 <Layout>
@@ -36,7 +38,7 @@ import DonationCard from '../components/DonationCard.astro';
                   </div>
                   <div class="swiper-slide">
                      <div class="banner-two__slider-single">
-                        <div class="banner-two__slider-bg" data-background="assets/images/slider-2.png">
+                        <div class="banner-two__slider-bg" data-background="/assets/images/slider-2.png">
                         </div>
                         <div class="container">
                            <div class="row">
@@ -136,10 +138,10 @@ import DonationCard from '../components/DonationCard.astro';
                      <div class="help__thumb">
                         <div class="help__thumb-inner">
                            <div class="thumb-top thumb">
-                              <img src="assets/images/help/thumb-top.png" alt="Image">
+                              <img src="/assets/images/about-2.png" alt="Image">
                            </div>
                            <div class="thumb-lg thumb" data-aos="fade-left" data-aos-duration="1000">
-                              <img src="assets/images/help/thumb-lg.png" alt="Image">
+                              <img src="/assets/images/about.png" alt="Image">
                               <div class="video-btn-wrapper">
                                  <a href="https://www.youtube.com/watch?v=RvreULjnzFo" target="_blank"
                                     title="video Player" class="open-video-popup">
@@ -148,13 +150,13 @@ import DonationCard from '../components/DonationCard.astro';
                               </div>
                            </div>
                            <div class="thumb thumb-bottom">
-                              <img src="assets/images/help/thumb-bottom.png" alt="Image">
+                              <img src="/assets/images/about-2.png" alt="Image">
                            </div>
                            <div class="line">
-                              <img src="assets/images/help/line.png" alt="Image">
+                              <img src="/assets/images/help/line.png" alt="Image">
                            </div>
                            <div class="grid-line">
-                              <img src="assets/images/help/grid.png" alt="Image" class="base-img">
+                              <img src="/assets/images/help/grid.png" alt="Image" class="base-img">
                            </div>
                            <div class="vertical-text">
                               <h5>We Give <span>Donations</span> to Poor People </h5>
@@ -165,14 +167,17 @@ import DonationCard from '../components/DonationCard.astro';
                   <div class="col-12 col-lg-7 col-xxl-6">
                      <div class="help__content">
                         <span class="sub-title"><i
-                           class="icon-donation"></i>Start donating poor
-                        people</span>
-                        <h2 class="title-animation">Helping each other can
-                           make <span>world</span> better
+                           class="icon-donation"></i>Start Supporting the Sultan Bahu Masjid Project
+
+                        </span>
+                        <h2 class="title-animation">Join Hands for a Noble Cause
+
+
+                           <!-- make <span>world</span> better -->
                         </h2>
-                        <p>Volunteering offers opportunities to develop new skills and gain valuable
-                           experience. This can include leadership, communication, project management, and teamwork
-                           skills.
+                        <p>At Sultan Bahu Centre, we are on a mission to build a beautiful Masjid that will serve as a place of worship, education, and community development. This Masjid will be a beacon of hope, bringing people together in faith and unity. Your generous contributions will help make this vision a reality.
+
+
                         </p>
                         <div class="help__content-icon-group">
                            <div class="help__content-icon">
@@ -180,8 +185,8 @@ import DonationCard from '../components/DonationCard.astro';
                                  <i class="icon-make-donation"></i>
                               </div>
                               <div class="content">
-                                 <h6>Start helping them</h6>
-                                 <p>Raising awareness about the charity's mission and cause.</p>
+                                 <h6>Start Supporting Us</h6>
+                                 <p>Help us raise awareness about this sacred mission. Every voice counts in building a stronger community.</p>
                               </div>
                            </div>
                            <div class="help__content-icon">
@@ -189,25 +194,26 @@ import DonationCard from '../components/DonationCard.astro';
                                  <i class="icon-support-heart"></i>
                               </div>
                               <div class="content">
-                                 <h6>Make Donations</h6>
-                                 <p>Raising awareness about the charity's mission and cause.</p>
+                                 <h6>Make a Donation</h6>
+                                 <p>Your contribution, big or small, is a step closer to creating a house of Allah.</p>
                               </div>
                            </div>
                         </div>
                         <div class="help__content-list">
                            <ul>
-                              <li><i class="fa-solid fa-circle-check"></i> Helped fund 3,265 Project powerful
-                                 corporate poor.
+                              <li><i class="fa-solid fa-circle-check"></i> Establish a lasting legacy by contributing to a cause that benefits generations.
                               </li>
-                              <li><i class="fa-solid fa-circle-check"></i> We give child a gift of a education
+                              <li><i class="fa-solid fa-circle-check"></i> Be part of a community effort to strengthen faith and brotherhood.
+
                               </li>
-                              <li><i class="fa-solid fa-circle-check"></i> We help companies develop powerful
-                                 corporate social Responsibility,
+                              <li><i class="fa-solid fa-circle-check"></i> Help us create a space for worship, learning, and social services.
+
+
                               </li>
                            </ul>
                         </div>
                         <div class="help__content-cta cta">
-                           <a href="about-us.html" aria-label="more about us" title="about us"
+                           <a href="/about" aria-label="more about us" title="about us"
                               class="btn--primary">More About Us</a>
                            <div class="contact-btn">
                               <div class="contact-icon">
@@ -215,7 +221,7 @@ import DonationCard from '../components/DonationCard.astro';
                               </div>
                               <div class="contact-content">
                                  <p>Phone</p>
-                                 <a href="tel:01-793-7938">+236 (456) 896 22</a>
+                                 <a href="tel:+4401212463953">(+44)01212463953 </a>
                               </div>
                            </div>
                         </div>
@@ -224,13 +230,13 @@ import DonationCard from '../components/DonationCard.astro';
                </div>
             </div>
             <div class="hand">
-               <img src="assets/images/help/hand.png" alt="Image">
+               <img src="/assets/images/help/hand.png" alt="Image">
             </div>
             <div class="parasuit">
-               <img src="assets/images/parasuit.png" alt="Image">
+               <img src="/assets/images/parasuit.png" alt="Image">
             </div>
             <div class="spade">
-               <img src="assets/images/help/spade.png" alt="Image">
+               <img src="/assets/images/help/spade.png" alt="Image">
             </div>
          </section>
          <!-- ==== / help section end ==== -->
@@ -255,7 +261,7 @@ import DonationCard from '../components/DonationCard.astro';
                            </div>
                         </div>
                         <div class="cta-img">
-                           <img src="assets/images/cta/one.png" alt="Image">
+                           <img src="/assets/images/slider-4.png" alt="Image">
                         </div>
                      </div>
                   </div>
@@ -268,7 +274,7 @@ import DonationCard from '../components/DonationCard.astro';
                            </a>
                         </div>
                         <div class="cta-img">
-                           <img src="assets/images/cta/two.png" alt="Image" class="parallax-image">
+                           <img src="/assets/images/slider-3.png" alt="Image" class="parallax-image">
                         </div>
                      </div>
                   </div>
@@ -289,7 +295,7 @@ import DonationCard from '../components/DonationCard.astro';
                            </div>
                         </div>
                         <div class="cta-img">
-                           <img src="assets/images/cta/three.png" alt="Image">
+                           <img src="/assets/images/slider-1.png" alt="Image">
                         </div>
                      </div>
                   </div>
@@ -301,13 +307,13 @@ import DonationCard from '../components/DonationCard.astro';
   <section class="difference-two">
    <div class="container">
       <div class="row gutter-40 align-items-center">
-         <div class="col-12 col-lg-4 col-xxl-5 d-none d-lg-block">
+         <div class="col-12 col-lg-4 col-xxl-5 d-none d-lg-block">   
             <div class="difference-two__thumb-wrapper">
                <div class="difference-two__thumb">
                   <div class="thumb-lg" data-aos="fade-right" data-aos-duration="1000">
-                     <img src="assets/images/difference/thumb-sm.png" alt="Image">
+                     <img src="/assets/images/about-4.png" alt="Image">
                      <div class="grid-line">
-                        <img src="assets/images/help/grid.png" alt="Image" class="base-img">
+                        <img src="/assets/images/help/grid.png" alt="Image" class="base-img">
                      </div>
                      <div class="video-btn-wrapper">
                         <a href="https://www.youtube.com/watch?v=RvreULjnzFo" target="_blank"
@@ -317,7 +323,7 @@ import DonationCard from '../components/DonationCard.astro';
                      </div>
                   </div>
                   <div class="thumb-sm" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                     <img src="assets/images/difference/thumb-lg.png" alt="Image">
+                     <img src="/assets/images/about-5.png" alt="Image">
                   </div>
                </div>
             </div>
@@ -452,7 +458,7 @@ import DonationCard from '../components/DonationCard.astro';
       </div>
    </div>
    <div class="spade">
-      <img src="assets/images/spade-green-two.png" alt="Image">
+      <img src="/assets/images/spade-green-two.png" alt="Image">
    </div>
 </section>
 <!-- ==== / difference two section end ==== -->
@@ -464,8 +470,7 @@ import DonationCard from '../components/DonationCard.astro';
                      <div class="section__header" data-aos="fade-up" data-aos-duration="1000">
                         <span class="sub-title"><i class="icon-donation"></i>Start donating poor
                         people</span>
-                        <h2 class="title-animation">Join The <span>Community</span> To Give
-                           Education For Children
+                        <h2 class="title-animation">Donate For <span>Community</span>
                         </h2>
                      </div>
                   </div>
@@ -503,25 +508,25 @@ import DonationCard from '../components/DonationCard.astro';
                         </div>
                         <div class="community__thumb d-none d-lg-block" data-aos="fade-left"
                            data-aos-duration="1000">
-                           <img src="assets/images/community/thumb.png" alt="Image">
+                           <img src="/assets/images/about-6.png" alt="Image">
                         </div>
                      </div>
                   </div>
                </div>
             </div>
             <div class="community-bg">
-               <img src="assets/images/community/community-bg.png" alt="Image" class="parallax-image">
+               <img src="/assets/images/slider-4.png" alt="Image" class="parallax-image">
             </div>
             <div class="gift" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-               <img src="assets/images/community/gift.png" alt="Image">
+               <img src="/assets/images/community/gift.png" alt="Image">
             </div>
             <div class="spade">
-               <img src="assets/images/community/spade.png" alt="Image" class="base-img">
+               <img src="/assets/images/community/spade.png" alt="Image" class="base-img">
             </div>
          </section>
          <!-- ==== / community section end ==== -->
          <!-- ==== testimonial section start ==== -->
-         <section class="testimonial" data-background="assets/images/bg-one.png">
+         <!-- <section class="testimonial" data-background="/assets/images/bg-one.png">
             <div class="container">
                <div class="row justify-content-center">
                   <div class="col-12 col-md-8 col-xl-7">
@@ -559,7 +564,7 @@ import DonationCard from '../components/DonationCard.astro';
                                     </div>
                                     <div class="author-info">
                                        <div class="author-thumb">
-                                          <img src="assets/images/author.png" alt="Image">
+                                          <img src="/assets/images/author.png" alt="Image">
                                        </div>
                                        <div class="author-content">
                                           <h6>Michel Smith</h6>
@@ -567,7 +572,7 @@ import DonationCard from '../components/DonationCard.astro';
                                        </div>
                                     </div>
                                     <div class="quote">
-                                       <img src="assets/images/quote.png" alt="Image">
+                                       <img src="/assets/images/quote.png" alt="Image">
                                     </div>
                                  </div>
                               </div>
@@ -589,7 +594,7 @@ import DonationCard from '../components/DonationCard.astro';
                                     </div>
                                     <div class="author-info">
                                        <div class="author-thumb">
-                                          <img src="assets/images/author.png" alt="Image">
+                                          <img src="/assets/images/author.png" alt="Image">
                                        </div>
                                        <div class="author-content">
                                           <h6>Ruby Klara</h6>
@@ -597,7 +602,7 @@ import DonationCard from '../components/DonationCard.astro';
                                        </div>
                                     </div>
                                     <div class="quote">
-                                       <img src="assets/images/quote.png" alt="Image">
+                                       <img src="/assets/images/quote.png" alt="Image">
                                     </div>
                                  </div>
                               </div>
@@ -619,7 +624,7 @@ import DonationCard from '../components/DonationCard.astro';
                                     </div>
                                     <div class="author-info">
                                        <div class="author-thumb">
-                                          <img src="assets/images/author.png" alt="Image">
+                                          <img src="/assets/images/author.png" alt="Image">
                                        </div>
                                        <div class="author-content">
                                           <h6>Bishu Kiev</h6>
@@ -627,7 +632,7 @@ import DonationCard from '../components/DonationCard.astro';
                                        </div>
                                     </div>
                                     <div class="quote">
-                                       <img src="assets/images/quote.png" alt="Image">
+                                       <img src="/assets/images/quote.png" alt="Image">
                                     </div>
                                  </div>
                               </div>
@@ -649,7 +654,7 @@ import DonationCard from '../components/DonationCard.astro';
                                     </div>
                                     <div class="author-info">
                                        <div class="author-thumb">
-                                          <img src="assets/images/author.png" alt="Image">
+                                          <img src="/assets/images/author.png" alt="Image">
                                        </div>
                                        <div class="author-content">
                                           <h6>Michel Smith</h6>
@@ -657,7 +662,7 @@ import DonationCard from '../components/DonationCard.astro';
                                        </div>
                                     </div>
                                     <div class="quote">
-                                       <img src="assets/images/quote.png" alt="Image">
+                                       <img src="/assets/images/quote.png" alt="Image">
                                     </div>
                                  </div>
                               </div>
@@ -679,7 +684,7 @@ import DonationCard from '../components/DonationCard.astro';
                                     </div>
                                     <div class="author-info">
                                        <div class="author-thumb">
-                                          <img src="assets/images/author.png" alt="Image">
+                                          <img src="/assets/images/author.png" alt="Image">
                                        </div>
                                        <div class="author-content">
                                           <h6>Ruby Klara</h6>
@@ -687,7 +692,7 @@ import DonationCard from '../components/DonationCard.astro';
                                        </div>
                                     </div>
                                     <div class="quote">
-                                       <img src="assets/images/quote.png" alt="Image">
+                                       <img src="/assets/images/quote.png" alt="Image">
                                     </div>
                                  </div>
                               </div>
@@ -709,7 +714,7 @@ import DonationCard from '../components/DonationCard.astro';
                                     </div>
                                     <div class="author-info">
                                        <div class="author-thumb">
-                                          <img src="assets/images/author.png" alt="Image">
+                                          <img src="/assets/images/author.png" alt="Image">
                                        </div>
                                        <div class="author-content">
                                           <h6>Bishu Kiev</h6>
@@ -717,7 +722,7 @@ import DonationCard from '../components/DonationCard.astro';
                                        </div>
                                     </div>
                                     <div class="quote">
-                                       <img src="assets/images/quote.png" alt="Image">
+                                       <img src="/assets/images/quote.png" alt="Image">
                                     </div>
                                  </div>
                               </div>
@@ -738,9 +743,9 @@ import DonationCard from '../components/DonationCard.astro';
                </div>
             </div>
             <div class="shape" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-               <img src="assets/images/community/shape.png" alt="Image" class="base-img">
+               <img src="/assets/images/community/shape.png" alt="Image" class="base-img">
             </div>
-         </section>
+         </section> -->
          <!-- ==== / testimonial section end ==== -->
          <!-- ==== cause slider two section start ==== -->
          <section class="cause-two">
@@ -763,60 +768,60 @@ import DonationCard from '../components/DonationCard.astro';
                               <div class="swiper-slide">
                                  <div class="cause-two__slider-single">
                                     <div class="cause-thumb">
-                                       <img src="assets/images/cause/five.png" alt="Image">
-                                       <a href="cause-details.html">
+                                       <img src="/assets/images/slider-1.png" alt="Image">
+                                        <!-- <a href="cause-details.html">
                                        <i class="fa-solid fa-arrow-right"></i>
-                                       </a>
+                                       </a> -->
                                     </div>
                                  </div>
                               </div>
                               <div class="swiper-slide">
                                  <div class="cause-two__slider-single">
                                     <div class="cause-thumb">
-                                       <img src="assets/images/cause/six.png" alt="Image">
-                                       <a href="cause-details.html">
+                                       <img src="/assets/images/slider-2.png" alt="Image">
+                                        <!-- <a href="cause-details.html">
                                        <i class="fa-solid fa-arrow-right"></i>
-                                       </a>
+                                       </a> -->
                                     </div>
                                  </div>
                               </div>
                               <div class="swiper-slide">
                                  <div class="cause-two__slider-single">
                                     <div class="cause-thumb">
-                                       <img src="assets/images/cause/seven.png" alt="Image">
-                                       <a href="cause-details.html">
+                                       <img src="/assets/images/slider-3.png" alt="Image">
+                                        <!-- <a href="cause-details.html">
                                        <i class="fa-solid fa-arrow-right"></i>
-                                       </a>
+                                       </a> -->
                                     </div>
                                  </div>
                               </div>
                               <div class="swiper-slide">
                                  <div class="cause-two__slider-single">
                                     <div class="cause-thumb">
-                                       <img src="assets/images/cause/five.png" alt="Image">
-                                       <a href="cause-details.html">
+                                       <img src="/assets/images/slider-4.png" alt="Image">
+                                        <!-- <a href="cause-details.html">
                                        <i class="fa-solid fa-arrow-right"></i>
-                                       </a>
+                                       </a> -->
                                     </div>
                                  </div>
                               </div>
                               <div class="swiper-slide">
                                  <div class="cause-two__slider-single">
                                     <div class="cause-thumb">
-                                       <img src="assets/images/cause/six.png" alt="Image">
-                                       <a href="cause-details.html">
+                                       <img src="/assets/images/about.png" alt="Image">
+                                        <!-- <a href="cause-details.html">
                                        <i class="fa-solid fa-arrow-right"></i>
-                                       </a>
+                                       </a> -->
                                     </div>
                                  </div>
                               </div>
                               <div class="swiper-slide">
                                  <div class="cause-two__slider-single">
                                     <div class="cause-thumb">
-                                       <img src="assets/images/cause/seven.png" alt="Image">
-                                       <a href="cause-details.html">
+                                       <img src="/assets/images/about-2.png" alt="Image">
+                                       <!--  <a href="cause-details.html">
                                        <i class="fa-solid fa-arrow-right"></i>
-                                       </a>
+                                       </a> --> 
                                     </div>
                                  </div>
                               </div>
@@ -872,126 +877,104 @@ import DonationCard from '../components/DonationCard.astro';
          <!-- ==== blog section start ==== -->
          <section class="blog">
             <div class="container">
-               <div class="row justify-content-center">
-                  <div class="col-12 col-md-8 col-xl-7">
-                     <div class="section__header text-center" data-aos="fade-up" data-aos-duration="1000">
-                        <span class="sub-title"><i class="icon-donation"></i>Start donating poor
-                        people</span>
-                        <h2 class="title-animation">Our Latest <span>News</span> &
-                           Articles you like
-                        </h2>
-                     </div>
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-xl-7">
+                  <div
+                    class="section__header text-center"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                  >
+                    <span class="sub-title"
+                      ><i class="icon-donation"></i>Start donating poor people</span
+                    >
+                    <h2 class="title-animation">
+                      Our Latest <span>News</span> & Articles you like
+                    </h2>
                   </div>
-               </div>
-               <div class="row gutter-40">
-                  <div class="col-12 col-lg-6 col-xl-4">
-                     <div class="blog__single-wrapper" data-aos="fade-up" data-aos-duration="1000">
+                </div>
+              </div>
+              <div class="row gutter-40">
+                {
+                  posts.map((blogs) => (
+                    <div class="col-12 col-lg-6 col-xl-4">
+                      <div
+                        class="blog__single-wrapper"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                      >
                         <div class="blog__single van-tilt">
-                           <div class="blog__single-thumb">
-                              <a href="blog-details.html">
-                              <img src="assets/images/blog/one.png" alt="Image">
+                          <div class="blog__single-thumb">
+                            <a href={blogs.url}>
+                              <img
+                                src={blogs.frontmatter.image}
+                                alt={blogs.frontmatter.title}
+                              />
+                            </a>
+                          </div>
+                          <div class="blog__single-inner">
+                            <div class="blog__single-meta">
+                              <p>
+                                <i class="icon-user" />
+                                SBC
+                              </p>
+                            </div>
+                            <div class="blog__single-content">
+                              <h5>
+                                <a href={blogs.url}>{blogs.frontmatter.title}</a>
+                              </h5>
+                              {/* <p id="description">{blogs.frontmatter.description}</p> */}
+                            </div>
+                            <div class="blog__single-cta">
+                              <a
+                                href={blogs.frontmatter.url}
+                                aria-label={blogs.frontmatter.title}
+                                title={blogs.frontmatter.title}
+                              >
+                                Read More
+                                <i class="fa-solid fa-circle-arrow-right" />
                               </a>
-                              <div class="tag">
-                                 <a href="blog-list.html"><i class="fa-solid fa-tags"></i>Health</a>
-                              </div>
-                           </div>
-                           <div class="blog__single-inner">
-                              <div class="blog__single-meta">
-                                 <p><i class="icon-user"></i>Robert Fox</p>
-                                 <p><i class="icon-message"></i>Comments (03)</p>
-                              </div>
-                              <div class="blog__single-content">
-                                 <h5><a href="blog-details.html">IT Service Case Studies Accelerate
-                                    Business Fly Success Tech</a>
-                                 </h5>
-                              </div>
-                              <div class="blog__single-cta">
-                                 <a href="blog-details.html" aria-label="blog details" title="blog details">Read
-                                 More<i class="fa-solid fa-circle-arrow-right"></i></a>
-                              </div>
-                           </div>
-                           <img src="assets/images/blog/spade.png" alt="Image" class="spade-two">
+                            </div>
+                          </div>
+                          <img
+                            src="/assets/images/blog/spade.png"
+                            alt="Image"
+                            class="spade-two"
+                          />
                         </div>
-                     </div>
-                  </div>
-                  <div class="col-12 col-lg-6 col-xl-4">
-                     <div class="blog__single-wrapper" data-aos="fade-up" data-aos-duration="1000"
-                        data-aos-delay="300">
-                        <div class="blog__single van-tilt">
-                           <div class="blog__single-thumb">
-                              <a href="blog-details.html">
-                              <img src="assets/images/blog/two.png" alt="Image">
-                              </a>
-                              <div class="tag">
-                                 <a href="blog-list.html"><i class="fa-solid fa-tags"></i>Education</a>
-                              </div>
-                           </div>
-                           <div class="blog__single-inner">
-                              <div class="blog__single-meta">
-                                 <p><i class="icon-user"></i>Robert Fox</p>
-                                 <p><i class="icon-message"></i>Comments (08)</p>
-                              </div>
-                              <div class="blog__single-content">
-                                 <h5><a href="blog-details.html">IT Service Case Studies Accelerate
-                                    Business Fly Success Tech</a>
-                                 </h5>
-                              </div>
-                              <div class="blog__single-cta">
-                                 <a href="blog-details.html" aria-label="blog details" title="blog details">Read
-                                 More<i class="fa-solid fa-circle-arrow-right"></i></a>
-                              </div>
-                           </div>
-                           <img src="assets/images/blog/spade.png" alt="Image" class="spade-two">
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-12 col-lg-6 col-xl-4">
-                     <div class="blog__single-wrapper" data-aos="fade-up" data-aos-duration="1000"
-                        data-aos-delay="600">
-                        <div class="blog__single van-tilt">
-                           <div class="blog__single-thumb">
-                              <a href="blog-details.html">
-                              <img src="assets/images/blog/three.png" alt="Image">
-                              </a>
-                              <div class="tag">
-                                 <a href="blog-list.html"><i class="fa-solid fa-tags"></i>Food</a>
-                              </div>
-                           </div>
-                           <div class="blog__single-inner">
-                              <div class="blog__single-meta">
-                                 <p><i class="icon-user"></i>Robert Fox</p>
-                                 <p><i class="icon-message"></i>Comments (13)</p>
-                              </div>
-                              <div class="blog__single-content">
-                                 <h5><a href="blog-details.html">IT Service Case Studies Accelerate
-                                    Business Fly Success Tech</a>
-                                 </h5>
-                              </div>
-                              <div class="blog__single-cta">
-                                 <a href="blog-details.html" aria-label="blog details" title="blog details">Read
-                                 More<i class="fa-solid fa-circle-arrow-right"></i></a>
-                              </div>
-                           </div>
-                           <img src="assets/images/blog/spade.png" alt="Image" class="spade-two">
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-12">
-                     <div class="section__cta cta text-center">
-                        <a href="blog-list.html" aria-label="our blog" title="our blog" class="btn--primary">View
-                        All <i class="fa-solid fa-arrow-right"></i></a>
-                     </div>
-                  </div>
-               </div>
+                      </div>
+                    </div>
+                  ))
+                }
+              </div>
             </div>
             <div class="blog-bg">
-               <img src="assets/images/blog/blog-bg.png" alt="Image">
+              <img src="/assets/images/blog/blog-bg.png" alt="Image" />
             </div>
             <div class="spade">
-               <img src="assets/images/blog/spade-base.png" alt="Image" class="base-img">
+              <img
+                src="/assets/images/blog/spade-base.png"
+                alt="Image"
+                class="base-img"
+              />
             </div>
-         </section>
+          </section>
+        <style>
+            #description {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                color: black;
+            }
+            #description:hover {
+                overflow: visible;
+                text-overflow: unset;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                color: white;
+            }
+        </style>
          <!-- ==== / blog section end ==== -->
 </Layout>

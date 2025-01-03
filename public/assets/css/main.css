@@ -2673,9 +2673,9 @@ div {
       flex-wrap: wrap;
 }
 .header .navbar-logo img {
-  max-width: 160px;
-  height: 36px;
-  border-radius: 22px;
+  max-width: 200px;
+  height: 100px;
+  border-radius: 30px;
 }
 .header .navbar__menu {
   -webkit-box-flex: 1;
@@ -3043,12 +3043,12 @@ div {
   border-top-right-radius: 20px;
 }
 .header-secondary .contact-btn p {
-  color: var(--secondary-color);
+  color: white;
 }
 .header-secondary .contact-btn a {
   font-weight: 800;
   font-size: 18px;
-  color: var(--secondary-color);
+  color: white;
 }
 .header-secondary .main-header__menu-box {
   -webkit-filter: none !important;

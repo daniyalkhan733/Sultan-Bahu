@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogsLayout.astro
 title: "The Power of Giving: Why Your Donations Matter"
 description: "Explore the impact of your donations and how they help build a stronger, more compassionate community."
-image: "/assets/images/blog/one.png"
+image: "/assets/images/blog-3.png"
 ---
 Donating is not just about giving money; it’s about creating impact, fostering hope, and strengthening our community. Whether it’s contributing to the Masjid development project or other charitable efforts, your donations have the power to change lives.
 

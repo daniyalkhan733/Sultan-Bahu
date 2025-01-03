@@ -58,7 +58,7 @@ const posts = await Astro.glob("../blogs/*.md");
                       <h5>
                         <a href={blogs.url}>{blogs.frontmatter.title}</a>
                       </h5>
-                      <p id="description">{blogs.frontmatter.description}</p>
+                      {/* <p id="description">{blogs.frontmatter.description}</p> */}
                     </div>
                     <div class="blog__single-cta">
                       <a
@@ -94,22 +94,22 @@ const posts = await Astro.glob("../blogs/*.md");
       />
     </div>
   </section>
-<style>
+  <style>
     #description {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        color: black;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      color: black;
     }
     #description:hover {
-        overflow: visible;
-        text-overflow: unset;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        color: white;
+      overflow: visible;
+      text-overflow: unset;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      color: white;
     }
-</style>
+  </style>
 </Layout>

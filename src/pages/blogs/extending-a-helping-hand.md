@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogsLayout.astro
 title: "Extending a Helping Hand: Supporting Charity"
 description: "Learn about the broader charity initiatives aimed at helping the needy, from food distribution to educational support."
-image: "/assets/images/blog/one.png"
+image: "/assets/images/blog-2.png"
 ---
 Charity is a timeless act of compassion and generosity that transforms lives and communities. Beyond the Masjid development project, our organization is committed to various charitable causes, including providing meals for the hungry, financial aid for families in need, and educational support for underprivileged children.
 
