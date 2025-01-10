@@ -1,31 +1,28 @@
 ---
-// Import the fetchPrograms function
 import { fetchPrograms } from "./api.js";
 
 type Program = {
   program_id: number;
   program_name: string;
-  program_image: string;
-  program_rate: number;
-
-  //   program_image_flag: string;
-  //   program_rate_id: number | null;
-  //   program_rate: number | null;
-  //   pr_start_date: string | null;
-  //   pr_end_date: string | null;
-  //   country_id: number | null;
-  //   country_name: string | null;
-  //   any_amount: string;
-  //   program_is_animal: string;
-  //   other_amount: string;
-  //   donation_url: string;
-  //   direct_debit_url: string;
-  //   programId: number;
+  image: string;
+  program_image_flag: string;
+  program_rate_id: number | null;
+  program_rate: number | null;
+  pr_start_date: string | null;
+  pr_end_date: string | null;
+  country_id: number | null;
+  country_name: string | null;
+  any_amount: string;
+  program_is_animal: string;
+  other_amount: string;
+  donation_url: string;
+  direct_debit_url: string;
+  programId: number;
 };
 
 // Use fetchPrograms to get data
 const data = await fetchPrograms();
-const responseData: Program[] = data; // Assuming the response is an array of programs
+// const responseData: Program[] = data;// Assuming the response is an array of programs
 // var programId: any = [];
 var { programId } = Astro.props;
 ---
@@ -70,13 +67,8 @@ var { programId } = Astro.props;
           <div class="cause__slider swiper">
             <div class="swiper-wrapper">
               {
-                responseData
-                  .filter(
-                    (program) =>
-                      !programId ||
-                      !programId.length ||
-                      programId.includes(program.program_id)
-                  )
+                data
+                  
                   .slice(0, 8)
                   .map((program) => (
                     <div class="swiper-slide" key={program.program_id}>
@@ -89,9 +81,9 @@ var { programId } = Astro.props;
                                 alt="Image"
                               />
                             </a>
-                            <div class="tag">
+                            {/* <div class="tag">
                               <a href="our-causes.html">Pakistan</a>
-                            </div>
+                            </div> */}
                           </div>
                           <div class="content">
                             <h6>
