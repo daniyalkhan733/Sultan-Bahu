@@ -1,28 +1,31 @@
 ---
+// Import the fetchPrograms function
 import { fetchPrograms } from "./api.js";
 
 type Program = {
   program_id: number;
   program_name: string;
   image: string;
-  program_image_flag: string;
-  program_rate_id: number | null;
-  program_rate: number | null;
-  pr_start_date: string | null;
-  pr_end_date: string | null;
-  country_id: number | null;
-  country_name: string | null;
-  any_amount: string;
-  program_is_animal: string;
-  other_amount: string;
-  donation_url: string;
-  direct_debit_url: string;
-  programId: number;
+  program_rate: number;
+
+  //   program_image_flag: string;
+  //   program_rate_id: number | null;
+  //   program_rate: number | null;
+  //   pr_start_date: string | null;
+  //   pr_end_date: string | null;
+  //   country_id: number | null;
+  //   country_name: string | null;
+  //   any_amount: string;
+  //   program_is_animal: string;
+  //   other_amount: string;
+    donation_url: string;
+  //   direct_debit_url: string;
+  //   programId: number;
 };
 
 // Use fetchPrograms to get data
 const data = await fetchPrograms();
-// const responseData: Program[] = data;// Assuming the response is an array of programs
+const responseData: Program[] = data; // Assuming the response is an array of programs
 // var programId: any = [];
 var { programId } = Astro.props;
 ---
@@ -67,23 +70,28 @@ var { programId } = Astro.props;
           <div class="cause__slider swiper">
             <div class="swiper-wrapper">
               {
-                data
-                  
+                responseData
+                  .filter(
+                    (program) =>
+                      !programId ||
+                      !programId.length ||
+                      programId.includes(program.program_id)
+                  )
                   .slice(0, 8)
                   .map((program) => (
-                    <div class="swiper-slide" key={program.program_id}>
+                    <div class="swiper-slide">
                       <div class="cause__slider-inner">
                         <div class="cause__slider-single">
                           <div class="thumb">
-                            <a href="cause-details.html">
+                            <a href={program.donation_url}>
                               <img
-                                src={program.program_image}
+                                src="/assets/images/cause/one.png"
                                 alt="Image"
                               />
                             </a>
-                            {/* <div class="tag">
-                              <a href="our-causes.html">Pakistan</a>
-                            </div> */}
+                            <div class="tag">
+                              <a href="our-causes.html">United Kingdom</a>
+                            </div>
                           </div>
                           <div class="content">
                             <h6>
@@ -105,13 +113,13 @@ var { programId } = Astro.props;
                               </div>
                               <div class="cause-progress__goal">
                                 <p>
-                                  <span class="goal" id="program-rate">£{program.program_rate}</span>
+                                  <span class="goal" id="program-rate">£ {program.program_rate ? program.program_rate:"Any Amount"}</span>
                                 </p>
                               </div>
                             </div>
                             <div class="cause__cta">
                               <a
-                                href="donate-us.html"
+                                href="http://sultan-bahu-centre.tscube.co.in"
                                 aria-label="donate now"
                                 title="donate now"
                                 class="btn--secondary"

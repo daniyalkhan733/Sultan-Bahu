@@ -8,7 +8,6 @@ export const fetchPrograms = async () => {
       Authorization: `Bearer ${apiKey}`,
     },
   });
-console.log(response)
   const data = await response.json();
   return data; // Assuming the response is an array of programs
 };
