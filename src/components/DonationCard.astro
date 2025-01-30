@@ -18,7 +18,7 @@ type Program = {
   //   any_amount: string;
   //   program_is_animal: string;
   //   other_amount: string;
-    donation_url: string;
+  donation_url: string;
   //   direct_debit_url: string;
   //   programId: number;
 };
@@ -75,7 +75,7 @@ var { programId } = Astro.props;
                     (program) =>
                       !programId ||
                       !programId.length ||
-                      programId.includes(program.program_id)
+                      programId.includes(program.program_id),
                   )
                   .slice(0, 8)
                   .map((program) => (
@@ -84,10 +84,7 @@ var { programId } = Astro.props;
                         <div class="cause__slider-single">
                           <div class="thumb">
                             <a href={program.donation_url}>
-                              <img
-                                src={program.image}
-                                alt="Image"
-                              />
+                              <img src={program.image} alt="Image" />
                             </a>
                             <div class="tag">
                               <a href="our-causes.html">United Kingdom</a>
@@ -96,7 +93,8 @@ var { programId } = Astro.props;
                           <div class="content">
                             <h6>
                               <a href={program.donation_url}>
-{program.program_name}                              </a>
+                                {program.program_name}{" "}
+                              </a>
                             </h6>
                           </div>
                           <div class="cause__slider-cta">
@@ -107,19 +105,24 @@ var { programId } = Astro.props;
                                   data-percent="85%"
                                 >
                                   <div class="progress-bar">
-                                    <div class="progress-bar-percent"></div>
+                                    <div class="progress-bar-percent" />
                                   </div>
                                 </div>
                               </div>
                               <div class="cause-progress__goal">
                                 <p>
-                                  <span class="goal" id="program-rate">£ {program.program_rate ? program.program_rate:"Any Amount"}</span>
+                                  <span class="goal" id="program-rate">
+                                    £{" "}
+                                    {program.program_rate
+                                      ? program.program_rate
+                                      : "Any Amount"}
+                                  </span>
                                 </p>
                               </div>
                             </div>
                             <div class="cause__cta">
                               <a
-                                href="http://sultan-bahu-centre.tscube.co.in"
+                                href={program.donation_url}
                                 aria-label="donate now"
                                 title="donate now"
                                 class="btn--secondary"
@@ -149,13 +152,9 @@ var { programId } = Astro.props;
   </div>
 </section>
 <style>
-   #program-rate {
+  #program-rate {
     font-size: 20px;
     font-weight: 700;
     color: black;
-
-    
-    
-    
-    }
+  }
 </style>
