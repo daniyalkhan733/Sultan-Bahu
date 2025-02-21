@@ -36,10 +36,11 @@ var { programId } = Astro.props;
       <div class="col-12 col-md-8 col-xl-7">
         <div class="section__header">
           <span class="sub-title"
-            ><i class="icon-donation"></i>Providing relief to those in distress.</span
+            ><i class="icon-donation"></i>Support Masjid Construction, Strengthen the Ummah!
+            </span
           >
           <h2 class="title-animation">
-            Help & <span>donate</span> them when they're in need
+            Help & <span>donate</span> for the masjid construction
           </h2>
         </div>
       </div>
@@ -87,7 +88,7 @@ var { programId } = Astro.props;
                               <img src={program.image} alt="Image" />
                             </a>
                             <div class="tag">
-                              <a href="our-causes.html">{program.country_name}</a>
+                              <a href={program.donation_url}>{program.country_name}</a>
                             </div>
                           </div>
                           <div class="content">

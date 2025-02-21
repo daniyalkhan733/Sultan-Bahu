@@ -19,11 +19,9 @@ const posts = await Astro.glob("./blogs/*.md");
                            <div class="row">
                               <div class="col-12 col-md-9 col-lg-7 col-xxl-6">
                                  <div class="banner-two__slider-content">
-                                    <span class="sub-title"><i class="icon-donation"></i>Start donating poor
-                                    people</span>
-                                    <h1>Giving help <br>
-                                       To Those <span class="bottom-line">peoples</span>
-                                       Who Need It.
+                                    <span class="sub-title"><i class="icon-donation"></i>Start donating for masjid</span>
+                                    <h1>Help Raise the <span class="bottom-line">Walls</span>
+                                         of Worship!
                                     </h1>
                                     <div class="banner__content-cta cta">
                                        <a href="/about" aria-label="about us" title="about us"
@@ -45,11 +43,10 @@ const posts = await Astro.glob("./blogs/*.md");
                            <div class="row">
                               <div class="col-12 col-md-9  col-lg-7 col-xxl-6">
                                  <div class="banner-two__slider-content">
-                                    <span class="sub-title"><i class="icon-donation"></i>Start donating poor
-                                    people</span>
-                                    <h1>Giving help <br>
-                                       To Those <span class="bottom-line">peoples</span>
-                                       Who Need It.
+                                    <span class="sub-title"><i class="icon-donation"></i>Start donating for masjid</span>
+                                    <h1>Be a Brick in the <span class="bottom-line">House</span>
+                                         of Allah!
+
                                     </h1>
                                     <div class="banner__content-cta cta">
                                        <a href="/about" aria-label="about us" title="about us"
@@ -71,11 +68,10 @@ const posts = await Astro.glob("./blogs/*.md");
                            <div class="row">
                               <div class="col-12 col-md-9 col-lg-7 col-xxl-6">
                                  <div class="banner-two__slider-content">
-                                    <span class="sub-title"><i class="icon-donation"></i>Start donating poor
-                                    people</span>
-                                    <h1>Giving help <br>
-                                       To Those <span class="bottom-line">peoples</span>
-                                       Who Need It.
+                                    <span class="sub-title"><i class="icon-donation"></i>Start donating for masjid</span>
+                                    <h1>Donate Today, <span class="bottom-line">Secure</span>
+                                         Your Akhirah!
+
                                     </h1>
                                     <div class="banner__content-cta cta">
                                        <a href="/about" aria-label="about us" title="about us"
@@ -129,7 +125,7 @@ const posts = await Astro.glob("./blogs/*.md");
           
            
          </section>
-<DonationCard />
+<DonationCard   programId={[109,118,119,120,121,122]}/>
 
          <!-- ==== help section start ==== -->
          <section class="help" >
@@ -648,16 +644,15 @@ const posts = await Astro.glob("./blogs/*.md");
                               <h5>
                                 <a href={blogs.url}>{blogs.frontmatter.title}</a>
                               </h5>
-                              {/* <p id="description">{blogs.frontmatter.description}</p> */}
                             </div>
                             <div class="blog__single-cta">
                               <a
-                                href={blogs.frontmatter.url}
+                                href={blogs.url}
                                 aria-label={blogs.frontmatter.title}
                                 title={blogs.frontmatter.title}
                               >
                                 Read More
-                                <i class="fa-solid fa-circle-arrow-right" />
+                                {/* <i class="fa-solid fa-circle-arrow-right" /> */}
                               </a>
                             </div>
                           </div>

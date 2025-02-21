@@ -8080,7 +8080,7 @@ div {
   padding: 8px 24px;
   background-color: var(--base-color);
   border-radius: 30px;
-  color: var(--black);
+  color: white;
 }
 
 .cause .thumb .tag a:hover {

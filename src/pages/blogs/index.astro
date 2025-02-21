@@ -58,16 +58,14 @@ const posts = await Astro.glob("../blogs/*.md");
                       <h5>
                         <a href={blogs.url}>{blogs.frontmatter.title}</a>
                       </h5>
-                      {/* <p id="description">{blogs.frontmatter.description}</p> */}
                     </div>
                     <div class="blog__single-cta">
                       <a
-                        href={blogs.frontmatter.url}
+                        href={blogs.url}
                         aria-label={blogs.frontmatter.title}
                         title={blogs.frontmatter.title}
                       >
                         Read More
-                        <i class="fa-solid fa-circle-arrow-right" />
                       </a>
                     </div>
                   </div>
