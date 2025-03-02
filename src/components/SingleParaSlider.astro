@@ -1,0 +1,158 @@
+---
+const { paranum, link } = Astro.props;
+---
+<style>
+    .carousel-container {
+        background-color: #01683F;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 20px auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .carousel-container h3, 
+    .carousel-container p {
+        color: white;
+    }
+
+    .audio-carousel {
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .carousel-inner {
+        padding: 20px 0;
+    }
+
+    .audio-item {
+        background-color: #fff;
+        border: 2px solid #01683F;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 10px auto;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .audio-title {
+        color: #01683F;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+        height: 40px;
+        background-color: #01683F;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0.8;
+        position: absolute;
+    }
+
+    @media (max-width: 768px) {
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 30px;
+            height: 30px;
+            background-color: rgba(1, 104, 63, 0.8);
+            top: 45%;
+        }
+
+        .carousel-control-prev {
+            left: 5px;
+        }
+
+        .carousel-control-next {
+            right: 5px;
+        }
+
+        .audio-item {
+            margin: 5px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .carousel-container {
+            margin: 10px;
+            padding: 15px 10px;
+        }
+
+        audio {
+            width: 100%;
+        }
+
+        .carousel-inner {
+            padding: 10px 0;
+        }
+    }
+
+    @media (min-width: 769px) {
+        .carousel-control-prev {
+            left: -50px;
+        }
+
+        .carousel-control-next {
+            right: -50px;
+        }
+    }
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        opacity: 1;
+    }
+
+    audio {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    audio::-webkit-media-controls-panel {
+        background-color: #f8f9fa;
+    }
+
+    .page-number {
+        text-align: center;
+        color: white;
+        margin-top: 20px;
+    }
+
+    .navigation-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ddd;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .nav-dot.active {
+        background-color: white;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+</style>
+<div class="audio-item">
+    <div class="audio-title">{paranum}</div>
+    <audio controls>
+        <source src={link} type="audio/mp3">
+    </audio>
+</div>

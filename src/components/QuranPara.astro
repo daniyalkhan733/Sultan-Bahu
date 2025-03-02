@@ -1,0 +1,234 @@
+---
+import SingleParaSlider from './SingleParaSlider.astro';
+
+const paraLinks = [
+  { para: "Para 1", link: "http://bit.ly/2qpLHGY" },
+  { para: "Para 2", link: "http://bit.ly/2qnS2Ha" },
+  { para: "Para 3", link: "http://bit.ly/2sbSqoq" },
+  { para: "Para 4", link: "http://bit.ly/2r6TOeq" },
+  { para: "Para 5", link: "http://bit.ly/2qzzsYk" },
+  { para: "Para 6", link: "http://bit.ly/2qI4EE2" },
+  { para: "Para 7", link: "http://bit.ly/2rW88HS" },
+  { para: "Para 8", link: "http://bit.ly/2qK0aO4" },
+  { para: "Para 9", link: "http://bit.ly/2rBqzB0" },
+  { para: "Para 10", link: "http://bit.ly/2s3dkdd" },
+  { para: "Para 11", link: "http://bit.ly/2so5po5" },
+  { para: "Para 12", link: "http://bit.ly/2rzgVP9" },
+  { para: "Para 13", link: "http://bit.ly/2rSIJ1l" },
+  { para: "Para 14", link: "http://bit.ly/2sk5Lid" },
+  { para: "Para 15", link: "http://bit.ly/2rKJHw3" },
+  { para: "Para 16", link: "http://bit.ly/2sMTr7y" },
+  { para: "Para 17", link: "http://bit.ly/2r9opp2" },
+  { para: "Para 18", link: "http://bit.ly/2rpK4c8" },
+  { para: "Para 19", link: "http://bit.ly/2rpq1iW" },
+  { para: "Para 20", link: "http://bit.ly/2rAX4Mc" },
+  { para: "Para 21", link: "http://bit.ly/2rBv2Aa" },
+  { para: "Para 22", link: "http://bit.ly/2sbmkft" },
+  { para: "Para 23", link: "http://bit.ly/2rtPXpH" },
+  { para: "Para 24", link: "http://bit.ly/2sfUCOE" },
+  { para: "Para 25", link: "http://bit.ly/2smfZxF" },
+  { para: "Para 26", link: "http://bit.ly/2tLUEvC" },
+  { para: "Para 27", link: "http://bit.ly/2tru5wz" },
+  { para: "Para 28", link: "http://bit.ly/2rXeW98" },
+  { para: "Para 29", link: "http://bit.ly/2s5NLEk" },
+  { para: "Para 30", link: "http://bit.ly/2s1BBB4" },
+];
+---
+<style>
+    .carousel-container {
+        background-color: #01683F;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 20px auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .carousel-container h3, 
+    .carousel-container p {
+        color: white;
+    }
+
+    .audio-carousel {
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .carousel-inner {
+        padding: 20px 0;
+    }
+
+    .audio-item {
+        background-color: #fff;
+        border: 2px solid #01683F;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 10px auto;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .audio-title {
+        color: #01683F;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+        height: 40px;
+        background-color: #01683F;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0.8;
+        position: absolute;
+    }
+
+    @media (max-width: 768px) {
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 30px;
+            height: 30px;
+            background-color: rgba(1, 104, 63, 0.8);
+            top: 45%;
+        }
+
+        .carousel-control-prev {
+            left: 5px;
+        }
+
+        .carousel-control-next {
+            right: 5px;
+        }
+
+        .audio-item {
+            margin: 5px;
+            padding: 10px;
+        }
+
+        .carousel-container {
+            margin: 10px;
+            padding: 15px 10px;
+        }
+
+        audio {
+            width: 100%;
+        }
+
+        .carousel-inner {
+            padding: 10px 0;
+        }
+    }
+
+    @media (min-width: 769px) {
+        .carousel-control-prev {
+            left: -50px;
+        }
+
+        .carousel-control-next {
+            right: -50px;
+        }
+    }
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        opacity: 1;
+    }
+
+    audio {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    audio::-webkit-media-controls-panel {
+        background-color: #f8f9fa;
+    }
+
+    .page-number {
+        text-align: center;
+        color: white;
+        margin-top: 20px;
+    }
+
+    .navigation-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ddd;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .nav-dot.active {
+        background-color: white;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+</style>
+<div class="container">
+    <div class="carousel-container">
+        <h3>Complete Quran</h3>
+        <p>جس پارہ پر  ٹچ کریں گے اس پارہ کی تلاوت مع اردو ترجمہ شروع ہوجائےگی
+        </p>
+        <div id="audioCarousel" class="carousel slide audio-carousel" data-bs-interval="false">
+            <div class="carousel-inner">
+                {paraLinks.map((para, index) => (
+                    <div class={`carousel-item ${index === 0 ? 'active' : ''}`}>
+                        <SingleParaSlider paranum={para.para} link={para.link} />
+                    </div>
+                ))}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#audioCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#audioCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="navigation-dots" id="navDots"></div>
+        <div class="page-number">Page <span id="currentPage" style="color: white;">1</span> of <span id="totalPages"  style="color: white;">30</span></div>
+    </div>
+</div>
+
+<script is:inline>
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('#audioCarousel');
+    const currentPageSpan = document.querySelector('#currentPage');
+    const dotsContainer = document.querySelector('#navDots');
+    const totalSlides = document.querySelectorAll('.carousel-item').length;
+
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('div');
+        dot.className = `nav-dot ${i === 0 ? 'active' : ''}`;
+        dot.addEventListener('click', () => {
+            const carouselInstance = bootstrap.Carousel.getInstance(carousel);
+            carouselInstance.to(i);
+        });
+        dotsContainer.appendChild(dot);
+    }
+
+    carousel.addEventListener('slide.bs.carousel', function (e) {
+        currentPageSpan.textContent = e.to + 1;
+        document.querySelectorAll('.nav-dot').forEach((dot, index) => {
+            dot.classList.toggle('active', index === e.to);
+        });
+    });
+});
+</script>
