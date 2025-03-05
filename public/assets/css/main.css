@@ -650,7 +650,7 @@ div {
 }
 
 .social a:hover {
-  color: var(--base-color);
+  color: var(--white);
 }
 
 .search-popup {
@@ -2733,7 +2733,7 @@ div {
 }
 
 .topbar .topbar__list a i {
-  color: var(--base-color);
+  color: var(--white);
 }
 
 .topbar .topbar__list a:hover {
@@ -2947,7 +2947,7 @@ div {
 }
 
 .topbar--tertiary .topbar__items .social a:hover {
-  color: var(--hover-color);
+  color: var(--white);
 }
 
 .header {
@@ -5622,7 +5622,7 @@ div {
 }
 
 .footer-two .footer-two__widget .social a:hover {
-  background-color: var(--base-color);
+  background-color: var(--white);
   color: var(--secondary-color);
   border-color: var(--base-color);
 }
@@ -5717,7 +5717,7 @@ div {
 }
 
 .footer-two .footer-two__widget .footer-two__widget-content--contact a i {
-  color: var(--base-color);
+  color: var(--white);
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
