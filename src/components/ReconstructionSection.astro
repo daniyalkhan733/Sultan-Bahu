@@ -1,0 +1,382 @@
+
+<style>
+    :root {
+      --dark: black;
+      --light: #f8f9fa;
+      --secondary: #28a745;
+    }
+
+
+    .navbar-brand img {
+      height: 50px;
+    }
+
+    .hero-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("/api/placeholder/1200/800") center/cover no-repeat;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn-donate {
+      background-color: var(--primary-color);
+      color: white;
+      font-weight: bold;
+      padding: 12px 30px;
+      border-radius: 30px;
+      border: none;
+      transition: all 0.3s;
+    }
+
+    .btn-donate:hover {
+      background-color: #e67e22;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .section-title {
+      position: relative;
+      margin-bottom: 40px;
+      padding-bottom: 15px;
+      text-align: center;
+      font-weight: 700;
+      color: black;
+    }
+
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 3px;
+      background-color: var(--primary-color);
+    }
+
+    .feature-card {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s;
+      height: 100%;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    .cost-highlight {
+      font-size: 4rem;
+      font-weight: 800;
+      color: var(--primary-color);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .sponsor-card {
+      border-radius: 15px;
+      overflow: hidden;
+      border: none;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s;
+    }
+
+    .sponsor-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .sponsor-card:nth-child(odd) .card-header {
+      background-color: var(--dark);
+      color: white;
+    }
+
+    .sponsor-card:nth-child(even) .card-header {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    .sponsor-price {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .gallery-item {
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-item img {
+      transition: all 0.5s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .contact-info i {
+      color: var(--primary-color);
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+
+    .progress-bar {
+      background-color: var(--primary-color);
+      height: 30px;
+    }
+
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 50px 0 20px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      transition: all 0.3s;
+    }
+
+    .social-icon:hover {
+      background-color: var(--primary-color);
+      transform: translateY(-3px);
+    }
+
+    /* Animation classes */
+    .fade-in {
+      opacity: 0;
+      transition: opacity 1s;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+    }
+
+    .slide-in-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 1s;
+    }
+
+    .slide-in-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: all 1s;
+    }
+
+    .slide-in-left.visible,
+    .slide-in-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .zoom-in {
+      opacity: 0;
+      transform: scale(0.5);
+      transition: all 1s;
+    }
+
+    .zoom-in.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .cost-highlight {
+        font-size: 2.5rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+
+  <!-- About Section -->
+  <section class="py-5" id="about">
+    <div class="container">
+      <h2 class="section-title">About The Project</h2>
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <img
+            src="/assets/images/masjid-1.png"
+            alt="Masjid Render"
+            class="img-fluid rounded-3 shadow fade-in"
+          />
+        </div>
+        <div class="col-lg-6">
+          <div class="slide-in-right">
+            <h3 class="mb-4" style="color: black;">Sultan Bahu Centre</h3>
+            <p class="lead">
+                Over the years, the center underwent several renovations to better serve the community. Initial renovations took place in 2009/2010, aimed at accommodating the needs of the local populace. However, it became apparent that more extensive renovations were necessary to fully realize the vision of the Sultan Bahu Centre and increasing demand of the Muslim Community.
+
+            </p>
+            <h4 style="text-align: center; padding-top: 20px;color:black">Estimated Cost (First Phase)</h4>
+
+            <div class="bg-light p-4 rounded-3 mt-4">
+              <div class="cost-highlight mb-5">£500,000</div>
+              <div class="progress " style="height: 30px;">
+                <div
+                  class="progress-bar progress-bar-striped progress-bar-animated"
+                  role="progressbar"
+                  style="width: 35%"
+                  aria-valuenow="35"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  35%
+                </div>
+              </div>
+              <p class="mt-2 text-muted">£175,000 raised of £500,000 goal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-5 bg-light" id="features">
+    <div class="container">
+      <h2 class="section-title">Key Facilities</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="feature-card bg-white p-4 fade-in">
+            <div class="feature-icon">
+              <i class="fas fa-female"></i>
+            </div>
+            <h4>Women's Prayer Facility</h4>
+            <p>
+              A dedicated and comfortable space for women to pray, designed
+              with privacy and accessibility in mind.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-card bg-white p-4 fade-in">
+            <div class="feature-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h4>Youth Hub</h4>
+            <p>
+              A modern space dedicated to catering the local youth population
+              with educational and recreational activities.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-card bg-white p-4 fade-in">
+            <div class="feature-icon">
+              <i class="fas fa-utensils"></i>
+            </div>
+            <h4>Soup Kitchen</h4>
+            <p>
+              A community-focused facility providing nutritious meals for
+              those in need in our local communities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Scripts -->
+<script is:inline>
+// Animation on scroll
+document.addEventListener("DOMContentLoaded", function () {
+  // Animation on scroll
+  const animatedElements = document.querySelectorAll(
+    ".fade-in, .slide-in-left, .slide-in-right, .zoom-in"
+  );
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  animatedElements.forEach((element) => {
+    observer.observe(element);
+  });
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute("href");
+      if (targetId === "#") return;
+
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 70,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
+
+  // Progress bar animation
+  setTimeout(() => {
+    const progressBars = document.querySelectorAll(".progress-bar");
+    progressBars.forEach((bar) => {
+      const width = bar.getAttribute("aria-valuenow") + "%";
+      bar.style.width = width;
+    });
+  }, 500);
+
+  // Contact form validation
+});
+</script>
