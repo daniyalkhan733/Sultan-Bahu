@@ -93,9 +93,9 @@ var { programId } = Astro.props;
                           </div>
                           <div class="content">
                             <h6>
-                              <a href={program.donation_url}>
-                                {program.program_name}{" "}
-                              </a>
+                                <a href={program.donation_url} title={program.program_name}>
+                                {program.program_name.length > 24 ? `${program.program_name.substring(0, 24)}...` : program.program_name}
+                                </a>
                             </h6>
                           </div>
                           <div class="cause__slider-cta">
