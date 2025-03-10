@@ -3021,7 +3021,7 @@ div {
 }
 
 .header .navbar__item a:hover {
-  color: var(--hover-color);
+  color: var(--secondary-color);
 }
 
 .header .navbar__item .dropdown-label-alter {
